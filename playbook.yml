@@ -1,6 +1,12 @@
 - name: Hello World Sample
-  hosts: all
+  hosts: Nagios
   tasks:
     - name: Hello Message
       debug:
         msg: "Hello World!"
+        
+- name: test ping
+  hosts: Centreon
+  tasks:
+    - name: Ping Pong
+    ping:
