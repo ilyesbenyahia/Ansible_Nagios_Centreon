@@ -9,4 +9,4 @@
   hosts: Centreon
   tasks:
     - name: Ping Pong
-    ping:
+      ping:
