@@ -1,12 +1,18 @@
-- name: Hello World Sample
+- name: Hello World
   hosts: Nagios
   tasks:
-    - name: Hello Message
-      debug:
+    - debug:
         msg: "Hello World!"
         
-- name: test ping
+- name: Test Ping
   hosts: Centreon
   tasks:
-    - name: Ping Pong
-      ping:
+    - ping:
+      
+- name: Test Module
+  hosts: all
+  tasks:
+    - test:
+      register: res
+      
+    - debug: var=res
